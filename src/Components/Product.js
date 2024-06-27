@@ -14,7 +14,7 @@ const Product = () => {
 
   const getData = async () => {
     try {
-      const res = await axios.get(`https://crud-backend-navy.vercel.app
+      const res = await axios.get(`https://crud-backend-gold.vercel.app
 /api/product`);
       setAllProduct(res.data.data);
       console.log(res.data);
@@ -26,7 +26,7 @@ const Product = () => {
   const handleDelete = async (id) => {
   
     try {
-      await axios.delete(`https://crud-backend-navy.vercel.app/api
+      await axios.delete(`https://ccrud-backend-gold.vercel.app/api
 /product/${id}`);
       setAllProduct(allProduct.filter(product => product._id !== id));
     } catch (error) {
@@ -68,9 +68,9 @@ const Product = () => {
     e.preventDefault();
     try {
       if (editingProduct) {
-        await axios.put(`https://crud-backend-navy.vercel.app/api/product/${editingProduct._id}`, form);
+        await axios.put(`https://crud-backend-gold.vercel.app/api/product/${editingProduct._id}`, form);
       } else {
-        await axios.post(`https://crud-backend-navy.vercel.app/api/product`, form);
+        await axios.post(`https://crud-backend-gold.vercel.app/api/product`, form);
       }
       setEditingProduct(null);
       getData();
