@@ -24,7 +24,8 @@ const PopUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/product", {
+      const res = await axios.post(`https://crud-backend-navy.vercel.app
+/api/product`, {
         title,
         description,
         price,
@@ -54,7 +55,8 @@ const PopUp = () => {
   };
 
   const getData = async () => {
-    const res = await axios.get("http://localhost:5000/api/product");
+    const res = await axios.get(`https://crud-backend-navy.vercel.app
+/api/product`);
     setAllProduct(res.data.data);
     console.log(res.data);
   };

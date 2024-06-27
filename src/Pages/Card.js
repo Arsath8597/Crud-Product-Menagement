@@ -6,7 +6,8 @@ const Card = ({ id, ImageSrc, Title, Discripton, Price, onDelete, onEdit }) => {
   const navigate = useNavigate();
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:5000/api/product/${id}`);
+      await axios.delete(`https://crud-backend-navy.vercel.app/api/product
+/${id}`);
       onDelete(id);
       alert("delete Successfull")
       navigate("/")

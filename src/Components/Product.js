@@ -14,7 +14,8 @@ const Product = () => {
 
   const getData = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/product");
+      const res = await axios.get(`https://crud-backend-navy.vercel.app
+/api/product`);
       setAllProduct(res.data.data);
       console.log(res.data);
     } catch (error) {
@@ -25,7 +26,8 @@ const Product = () => {
   const handleDelete = async (id) => {
   
     try {
-      await axios.delete(`http://localhost:5000/api/product/${id}`);
+      await axios.delete(`hhttps://crud-backend-navy.vercel.app/api
+/product/${id}`);
       setAllProduct(allProduct.filter(product => product._id !== id));
     } catch (error) {
       console.error("Error deleting the product:", error);
@@ -66,9 +68,9 @@ const Product = () => {
     e.preventDefault();
     try {
       if (editingProduct) {
-        await axios.put(`http://localhost:5000/api/product/${editingProduct._id}`, form);
+        await axios.put(`https://crud-backend-navy.vercel.app/api/product/${editingProduct._id}`, form);
       } else {
-        await axios.post(`http://localhost:5000/api/product`, form);
+        await axios.post(`https://crud-backend-navy.vercel.app/api/product`, form);
       }
       setEditingProduct(null);
       getData();
