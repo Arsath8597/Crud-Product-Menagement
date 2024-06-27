@@ -26,7 +26,7 @@ const Product = () => {
   const handleDelete = async (id) => {
   
     try {
-      await axios.delete(`hhttps://crud-backend-navy.vercel.app/api
+      await axios.delete(`https://crud-backend-navy.vercel.app/api
 /product/${id}`);
       setAllProduct(allProduct.filter(product => product._id !== id));
     } catch (error) {
